@@ -1,0 +1,11 @@
+{
+  "name": "my-electron-investigate-ecosystem",
+  "version": "1.0.0",
+  "description": "my minimal electron application for investigating ecosystem",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "virusbb001",
+  "license": "ISC"
+}
