@@ -9,6 +9,7 @@
   "author": "virusbb001",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^22.0.0"
+    "electron": "^22.0.0",
+    "typescript": "^4.9.4"
   }
 }
