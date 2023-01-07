@@ -4,6 +4,8 @@
   "description": "my minimal electron application for investigating ecosystem",
   "main": "dist/main.js",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "run": "electron dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "virusbb001",
