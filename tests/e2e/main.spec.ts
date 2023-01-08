@@ -18,7 +18,13 @@ test.afterEach(async () => {
   await electronApp.close();
 });
 
-test("contains page that contains hello world", async () => {
+test("show one number and two buttons increment and decrement", async () => {
   const window = await electronApp.firstWindow();
-  await expect(window.getByText("Hello World.")).toBeVisible()
+  const displayCount = window.locator("#container > span");
+  const incButton = window.getByText("increment");
+  const decButton = window.getByText("Decrement");
+
+  await expect(displayCount).toBeVisible();
+  await expect(incButton).toBeVisible();
+  await expect(decButton).toBeVisible();
 });
