@@ -5,7 +5,8 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "run": "electron dist/main.js"
+    "run": "electron dist/main.js",
+    "test:e2e": "playwright test"
   },
   "author": "virusbb001",
   "license": "ISC",
