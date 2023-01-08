@@ -28,9 +28,18 @@ function main() {
 
   updateDisplay();
 
+  const saveButton = document.createElement("button");
+  saveButton.textContent = "Save";
+
+  const loadButton = document.createElement("button");
+  loadButton.textContent = "Load";
+
   container.appendChild(displayCount);
   container.appendChild(incrementButton);
   container.appendChild(decrementButton);
+  container.appendChild(document.createElement('br'))
+  container.appendChild(saveButton);
+  container.appendChild(loadButton);
 }
 
 main();
