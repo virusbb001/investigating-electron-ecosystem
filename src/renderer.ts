@@ -21,6 +21,11 @@ function main() {
     updateDisplay();
   });
 
+  decrementButton.addEventListener("click", () => {
+    countNumber = countNumber - 1;
+    updateDisplay();
+  });
+
   updateDisplay();
 
   container.appendChild(displayCount);

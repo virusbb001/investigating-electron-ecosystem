@@ -43,3 +43,12 @@ test("increment number when click inc button", async () => {
   await incButton.click()
   await expect(displayCount).toHaveText("1");
 });
+
+test("decrement number when click dec button", async () => {
+  const window = await electronApp.firstWindow();
+  const { displayCount, decButton } = generateLocator(window);
+
+  await expect(displayCount).toHaveText("0");
+  await decButton.click()
+  await expect(displayCount).toHaveText("-1");
+});
