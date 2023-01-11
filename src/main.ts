@@ -22,6 +22,9 @@ app.whenReady().then(() => {
     await fs.writeFile(SAVE_PATH, count.toString());
     return
   })
+  ipcMain.handle("load", async (_e) => {
+    return Number(await fs.readFile(SAVE_PATH, "utf8"));
+  })
   createWindow();
 });
 

@@ -39,6 +39,13 @@ function main() {
   const loadButton = document.createElement("button");
   loadButton.textContent = "Load";
 
+  loadButton.addEventListener("click", () => {
+    window.electron.load().then(v => {
+      countNumber = v;
+      updateDisplay();
+    });
+  });
+
   container.appendChild(displayCount);
   container.appendChild(incrementButton);
   container.appendChild(decrementButton);

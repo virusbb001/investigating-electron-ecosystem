@@ -76,3 +76,15 @@ test("save count to file", async () => {
   const content = await fs.promises.readFile(savePath, { encoding: "utf8" });
   expect(content.trim()).toEqual("3");
 });
+
+test("load count from file", async () => {
+  const window = await electronApp.firstWindow();
+  const userPath = await electronApp.evaluate(({ app }) => app.getPath("userData"));
+  const savePath = path.join(userPath, FILE_NAME);
+
+  const { displayCount, loadButton } = generateLocator(window);
+  await expect(displayCount).toHaveText("0");
+  await fs.promises.writeFile(savePath, "42");
+  await loadButton.click();
+  await expect(displayCount).toHaveText("42");
+});
