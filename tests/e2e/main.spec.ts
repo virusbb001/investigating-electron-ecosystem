@@ -13,6 +13,14 @@ let electronApp: ElectronApplication
 
 const FILE_NAME = "count.txt";
 
+test.describe.configure({
+  /*
+   * saving/loading file uses same file. When run both test same time,
+   * they will fail because such like loading 3 content saved by saving test.
+   */
+  mode: "serial"
+})
+
 test.beforeEach(async () => {
   electronApp = await launchApp();
 });
