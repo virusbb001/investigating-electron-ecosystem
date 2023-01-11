@@ -30,6 +30,11 @@ function main() {
 
   const saveButton = document.createElement("button");
   saveButton.textContent = "Save";
+  saveButton.addEventListener("click", () => {
+    window.electron.save(countNumber).catch(e => {
+      window.alert(e);
+    });
+  });
 
   const loadButton = document.createElement("button");
   loadButton.textContent = "Load";
