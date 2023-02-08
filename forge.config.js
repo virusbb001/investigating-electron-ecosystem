@@ -1,4 +1,12 @@
+const util = require('node:util')
+const execFile = util.promisify(require('node:child_process').execFile)
+
 module.exports = {
+  hooks: {
+    generateAssets: async () => {
+      await execFile('npm', ['run', 'build'])
+    }
+  },
   packagerConfig: {},
   rebuildConfig: {},
   makers: [
