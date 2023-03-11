@@ -1,0 +1,12 @@
+name: lint
+on:
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - ".github/workflows/**"
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: reviewdog/action-actionlint@v1
