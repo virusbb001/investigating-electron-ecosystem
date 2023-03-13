@@ -15,6 +15,14 @@ module.exports = {
       config: {},
     },
     {
+      name: '@electron-forge/maker-flatpak',
+      config: {
+        options: {
+          categories: ["Development"]
+        }
+      }
+    },
+    {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
     },
