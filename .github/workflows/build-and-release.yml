@@ -75,6 +75,7 @@ jobs:
           files: |
             out/**/*.deb
             out/**/*.dmg
+            out/**/*.flatpak
             out/**/*setup*.exe
             out/**/*.nupkg
             out/**/*.rpm
